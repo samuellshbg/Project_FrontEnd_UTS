@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seyuel - Favorit</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <header>
+        <div class="navbar">
+            <div class="logo">
+                <h1>Seyuel</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li>
+                        <form id="search-form">
+                            <input type="text" id="search-input" placeholder="Produk...">
+                            <button type="submit">Cari</button>
+                        </form>
+                    </li>
+                    <li><a href="index.html">Beranda</a></li>
+                    <li><a href="#aboutus-section">Tentang Kami</a></li>
+                    <li><a href="cart.html">Keranjang</a></li>
+                    <li><a href="favorites.html">Favorit (<span id="favorites-count">0</span>)</a></li>
+                    <li><a href="checkout.html">Checkout</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Favorit Section -->
+    <section id="favorites">
+        <h2>Produk Favorit Anda</h2>
+        <div id="favorites-list"></div> <!-- Tempat untuk menampilkan favorit -->
+    </section>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            // Ambil data favorit dari local storage
+            const favorites = JSON.parse(localStorage.getItem('favorites')) || [];
+            const favoritesList = $('#favorites-list');
+
+            if (favorites.length === 0) {
+                favoritesList.append('<p>Tidak ada produk favorit.</p>');
+            } else {
+                favorites.forEach(function(item) {
+                    favoritesList.append(`
+                        <div class="favorite-item">
+                            <img src="${item.image}" alt="${item.name}">
+                            <h4>${item.name}</h4>
+                            <p>Rp. ${item.price}</p>
+                            <button class="remove-favorite">Hapus dari Favorit</button>
+                        </div>
+                    `);
+                });
+            }
+
+            // Event listener untuk menghapus favorit
+            favoritesList.on('click', '.remove-favorite', function() {
+                const itemName = $(this).siblings('h4').text();
+                const updatedFavorites = favorites.filter(item => item.name !== itemName);
+                localStorage.setItem('favorites', JSON.stringify(updatedFavorites));
+                location.reload(); // Refresh halaman untuk melihat perubahan
+            });
+        });
+    </script>
+</body>
+</html>
