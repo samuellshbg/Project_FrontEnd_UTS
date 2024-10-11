@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seyuel - Home</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="logo">
+            <h1>Seyuel</h1>
+        </div>
+        <nav>
+            <ul>
+
+                <li>
+                    <a href="#" id="search-icon"><i class="fa fa-search" aria-hidden="true"></i></a></li>
+                <!-- Form pencarian disembunyikan awalnya -->
+                    <form id="search-form" class="hidden" onsubmit="return false;">
+                        <input type="text" id="search-input" placeholder="Cari produk...">
+                    </form>
+                <li><a href="index.html"><i class="fas fa-home"></i></a></li>
+                <li><a href="favorite.html"><i class="fas fa-heart"></i> (<span id="favorite-count">0</span>)</a></li>
+                <li><a href="cart.html"><i class="fas fa-shopping-cart"></i> (<span id="cart-count">0</span>)</a></li>
+                <li><a href="about us.html">About Us</a></li> <!-- Mengubah Favorite menjadi About Us -->
+            </ul>
+        </nav>
+    </header>
+
+    <!-- About Us Section -->
+    <section id="aboutus-section">
+        <h2>Tentang Kami</h2> <!-- Judul bagian About Us -->
+        <p>
+            Selamat datang di *Seyuel*, toko fashion yang menyediakan berbagai produk berkualitas dengan gaya modern dan klasik. Kami berdedikasi untuk memberikan yang terbaik, baik dari segi produk maupun pelayanan pelanggan, dengan fokus pada kualitas, keandalan, dan keunikan.
+        </p>
+        <p>
+            Berdiri sejak 2023, *Seyuel* telah berkembang pesat berkat dukungan pelanggan setia dan usaha kami dalam menyediakan produk fashion yang selalu up-to-date dengan tren terbaru. Misi kami adalah memberikan akses kepada pelanggan kami untuk memiliki produk fashion yang tidak hanya terjangkau tetapi juga modis dan nyaman digunakan.
+        </p>
+        <p>
+            Kami percaya bahwa pakaian adalah cerminan dari kepribadian, dan melalui *Seyuel*, kami ingin setiap orang dapat menemukan pakaian yang cocok dengan selera dan gaya mereka masing-masing. Setiap produk yang kami tawarkan dibuat dengan perhatian pada detail, dan kami memastikan kualitas terbaik untuk kepuasan pelanggan.
+        </p>
+        <p>
+            Terima kasih telah mempercayai *Seyuel* sebagai pilihan belanja fashion Anda. Kami berharap dapat terus memberikan layanan yang memuaskan dan produk yang luar biasa untuk Anda. Jika Anda memiliki pertanyaan, saran, atau kritik, jangan ragu untuk menghubungi kami.
+        </p>
+        <p>
+            Salam hangat,<br>
+            Tim *Seyuel*
+        </p>
+    </section>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- Link ke pustaka jQuery -->
+    <script src="script.js"></script> <!-- Link ke file JavaScript eksternal -->
+</body>
+</html>
