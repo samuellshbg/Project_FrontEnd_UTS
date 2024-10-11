@@ -1,0 +1,293 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background: linear-gradient(90deg, #12a5ce, #3d81ff);
+    background-color: #007bff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar .logo h1 {
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color:white;
+}
+
+.navbar nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.navbar nav ul li a {
+    text-decoration: none;
+    color:white;
+    font-size: 18px;
+}
+
+#search-input {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    padding: 5px 10px;
+    border: none;
+    background-color: #202121;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.navbar ul {
+    list-style-type: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar li {
+    margin: 0 30px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Sembunyikan form pencarian awalnya */
+#search-form.hidden {
+    display: none;
+}
+
+/* Tampilkan form pencarian saat ikon diklik */
+#search-form.active {
+    display: inline-block;
+}
+
+/* Tampilan ikon pencarian */
+#search-icon {
+    color: white;
+    cursor: pointer;
+    padding: 0 10px;
+    font-size: 20px; /* Default size */
+    font-weight: 100; /* Make the icon thinner */
+    transition: font-size 0.3s ease; /* Smooth transition when resizing */
+}
+
+/* Sesuaikan input pencarian */
+#search-input {
+    padding: 5px;
+    font-size: 1rem;
+    border: none;
+    outline: none;
+    width: 200px; /* Atur ukuran input pencarian */
+}
+
+/* Hero Section */
+/* .hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+    /* Full width and height of the viewport */
+    /* width: 100vw;
+    background: center/cover; */
+/* } */ 
+
+
+.slideshow-container {
+    position: relative;
+    width: 100%;
+    height: 1000px;
+    overflow: hidden;
+}
+
+.hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.active {
+    opacity: 1;
+}
+
+.content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Jika menggunakan tag <img> di hero */
+.hero img {
+    width: 100%; /* Lebar penuh layar */
+    height: auto; /* Tinggi penuh layar */
+    object-fit: cover; /* Agar gambar tidak terdistorsi */
+    object-position: center;
+    max-width: 1200px;
+}
+
+/* Product Section */
+#products {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.product {
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin: 10px;
+    display: inline-block;
+    text-align: center;
+}
+
+.product img {
+    max-width: 100px;
+    height: auto;
+}
+
+.add-to-cart, .save-to-favorite {
+    padding: 10px 20px;
+    margin: 10px 5px;
+    background-color:  #12a5ce;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.add-to-cart:hover, .save-to-favorite:hover {
+    background-color:  #12a5ce;
+}
+
+/* Cart & Favorite */
+#cart-section {
+    padding: 20px;
+}
+
+.cart-item-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 15px;
+}
+
+/* Ukuran gambar diperbesar */
+.item-image {
+    width: 250px; /* Perbesar ukuran gambar */
+    height: 250px;
+    object-fit: cover;
+}
+
+#categories {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 40px;
+    background-color: white;
+}
+
+.category {
+    text-align: center;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.category img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.category h3 {
+    margin-top: 10px;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+/* Footer */
+footer {
+    padding: 2px 4px;
+	background: linear-gradient(90deg, #12a5ce, #3d81ff);
+    border-top: solid #3d81ff 12px;
+    background-color: #007bff;
+    color: #fff;
+    text-align: center;
+}
+
+footer h3 {
+    margin-bottom: 20px;
+}
+
+.contact-info {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 1rem;
+    padding: 4px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 18px;
+}
+
+.contact-item i {
+    font-size: 24px;
+    margin-right: 10px;
+}
+
+.contact-item span {
+    font-size: 16px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 765px) {
+    .contact-item {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .contact-item i {
+        margin-right: 0;
+        margin-bottom: 5px;
+    }
+
+    #products{
+        display: inline-block;
+        text-align: center;
+    }
+}
