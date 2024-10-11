@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seyuel - Home</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="logo">
+            <h1>Seyuel</h1>
+        </div>
+        <nav>
+            <ul>
+
+                <li>
+                    <a href="#" id="search-icon" class="tombolSearch"><i class="fa fa-search" aria-hidden="true"></i></a></li>
+                <!-- Form pencarian disembunyikan awalnya -->
+                    <form id="search-form" class="hidden" onsubmit="return false;">
+                        <input type="text" id="search-input" placeholder="Cari produk...">
+                    </form>
+                <li><a href="index.html"><i class="fas fa-home"></i></a></li>
+                <li><a href="favorite.html"><i class="fas fa-heart"></i> (<span id="favorite-count">0</span>)</a></li>
+                <li><a href="cart.html"><i class="fas fa-shopping-cart"></i> (<span id="cart-count">0</span>)</a></li>
+                <li><a href="about us.html">About Us</a></li> <!-- Mengubah Favorite menjadi About Us -->
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Section -->
+
+        <!-- Slideshow Section -->
+        <section class="slideshow-container">
+            <div class="mySlides fade">
+                <img src="./seyuel.png" class="hero-image" alt="Slide 1">
+            </div>
+    
+            <div class="mySlides fade">
+                <img src="./tampilan2.jpg" class="hero-image" alt="Slide 2">
+            </div>
+        </section>
+
+    <!-- Kategori Section -->
+
+    <section id="categories">
+        <div class="category">
+            <img src="./tampilan hoodie.jpeg" alt="Zip Hoodie/Hoodie" class="gambarKategori">
+            <h3>ZIP HOODIE/HOODIE</h3>
+        </div>
+        <div class="category">
+            <img src="./tampilan jacket.jpeg" alt="Jacket" class="gambarKategori">
+            <h3>JACKET</h3>
+        </div>
+        <div class="category">
+            <img src="./tampilan croptop.jpeg"  alt="Oversited Tee/Croptop" class="gambarKategori">
+            <h3>OVERSITED TEE/CROPTOP</h3>
+        </div>
+        <div class="category">
+            <img src="./tampilan accessoris.jpeg" alt="Accessories" class="gambarKategori">
+            <h3>ACCESSORIES</h3>
+        </div>
+        <div class="category">
+            <img src="./tampilan pants.jpeg"  alt="Pants" class="gambarKategori">
+            <h3>PANTS</h3>
+        </div>
+    </section>
+
+        <section id="products">
+   
+                <div class="product" data-name="Kaos Hitam" data-price="150000">
+                    <img src="./Red Leather Jacket.jpeg" alt="Kaos Hitam">
+                    <h4>Black T-Shirt</h4>
+                    <p>Rp. 150.000</p>
+                    <button class="add-to-cart">Tambah ke Keranjang</button>
+                    <button class="save-to-favorite">Simpan ke Favorit</button>
+                </div>
+            </div>
+    
+            <!-- Produk Celana -->
+            <div class="product-category" id="celana-products">
+                <div class="product" data-name="Celana Jeans" data-price="200000">
+                    <img src="./Red Leather Jacket.jpeg" alt="Celana Jeans">
+                    <h4>Jeans</h4>
+                    <p>Rp. 200.000</p>
+                    <button class="add-to-cart">Tambah ke Keranjang</button>
+                    <button class="save-to-favorite">Simpan ke Favorit</button>
+                </div>
+            </div>
+    
+            <!-- Produk Jaket -->
+            <div class="product-category" id="jaket-products">
+                <div class="product" data-name="Jaket Merah" data-price="250000">
+                    <img src="Red Leather Jacket.jpeg" alt="Jaket Merah">
+                    <h4>Red Leather Jacket</h4>
+                    <p>Rp. 300.000</p>
+                    <button class="add-to-cart">Tambah ke Keranjang</button>
+                    <button class="save-to-favorite">Simpan ke Favorit</button>
+                </div>
+                
+            </div>
+        </section>
+  
+
+    <!-- Produk Section -->
+    <section id="products">
+        <!-- Produk Kaos -->
+        <div class="product-category" id="kaos-products">
+
+            
+            <div class="product" data-name="Kaos Putih" data-price="150000">
+                <img src="Kaos Putih.png" alt="Kaos Putih">
+                <h4>White T-Shirt</h4>
+                <p>Rp. 150.000</p>
+                <button class="add-to-cart">Tambah ke Keranjang</button>
+                <button class="save-to-favorite">Simpan ke Favorit</button>
+            </div>
+
+            <div class="product" data-name="Kaos Hitam" data-price="150000">
+                <img src="Kaos Putih Abu.png" alt="Kaos Hitam">
+                <h4>Silvra T-Shirt</h4>
+                <p>Rp. 150.000</p>
+                <button class="add-to-cart">Tambah ke Keranjang</button>
+                <button class="save-to-favorite">Simpan ke Favorit</button>
+            </div>
+
+
+        
+        </div>
+
+        
+                 <!-- Produk Celana -->
+                 <div class="product-category" id="celana-products">
+                    <div class="product" data-name="Celana Jeans" data-price="200000">
+                        <img src="./Red Leather Jacket.jpeg" alt="Celana Jeans">
+                        <h4>Jeans</h4>
+                        <p>Rp. 200.000</p>
+                        <button class="add-to-cart">Tambah ke Keranjang</button>
+                        <button class="save-to-favorite">Simpan ke Favorit</button>
+                    </div>
+                </div>
+   
+
+   
+    </section>
+
+    <!-- Contact Section -->
+    <footer>
+        <h3>Contacts</h3>
+        <div class="contact-info">
+            <a href="tel:087785137559" class="contact-item">
+                <i class="fas fa-phone-alt"></i>
+            </a>
+            <a href="mailto:sherlyolivia306@gmail.com" class="contact-item">
+                <i class="fas fa-envelope"></i>
+            </a>
+            <a href="https://instagram.com/sherlyviia" target="_blank" class="contact-item">
+                <i class="fab fa-instagram"></i>
+            </a>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
