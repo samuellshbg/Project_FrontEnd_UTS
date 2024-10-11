@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seyuel - Home</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="logo">
+            <h1>Seyuel</h1>
+        </div>
+        <nav>
+            <ul>
+
+                <li>
+                    <a href="#" id="search-icon"><i class="fa fa-search" aria-hidden="true"></i></a></li>
+                <!-- Form pencarian disembunyikan awalnya -->
+                    <form id="search-form" class="hidden" onsubmit="return false;">
+                        <input type="text" id="search-input" placeholder="Cari produk...">
+                    </form>
+                <li><a href="index.html"><i class="fas fa-home"></i></a></li>
+                <li><a href="favorite.html"><i class="fas fa-heart"></i> (<span id="favorite-count">0</span>)</a></li>
+                <li><a href="cart.html"><i class="fas fa-shopping-cart"></i> (<span id="cart-count">0</span>)</a></li>
+                <li><a href="about us.html">About Us</a></li> <!-- Mengubah Favorite menjadi About Us -->
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Cart Section -->
+    <section id="cart-section">
+        <h2>Keranjang Belanja</h2>
+        <div id="cart-items" class="cart-item-list">
+            <div class="cart-item">
+                <input type="checkbox" class="item-checkbox">
+                <img src="https://via.placeholder.com/80" alt="Gambar Produk" class="item-image">
+                <div class="item-details">
+                    <p class="item-name">Nama Produk 1</p>
+                    <p class="item-price">Rp. 100.000</p>
+                    <input type="number" class="item-quantity" value="1" min="1">
+                </div>
+            </div>
+
+            <div class="cart-item">
+                <input type="checkbox" class="item-checkbox">
+                <img src="https://via.placeholder.com/80" alt="Gambar Produk" class="item-image">
+                <div class="item-details">
+                    <p class="item-name">Nama Produk 2</p>
+                    <p class="item-price">Rp. 200.000</p>
+                    <input type="number" class="item-quantity" value="1" min="1">
+                </div>
+            </div>
+
+            <!-- Tambahkan produk lainnya di sini -->
+
+        </div>
+        <h3>Total: Rp. <span id="total-price">0</span></h3>
+        <button id="checkout-btn">Checkout</button>
+    </section>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- Link ke pustaka jQuery -->
+    <script src="script.js"></script> <!-- Link ke file JavaScript eksternal -->
+</body>
+</html>
